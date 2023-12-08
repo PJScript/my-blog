@@ -6,7 +6,21 @@
 4. Material Tailwind
 5. Tailwind
 
+## 실행방법
+
+```
+yarn install
+// or
+npm install
+
+yarn run dev
+// or
+npm run dev
+```
+
 ## 기본내용
+
+> 테일윈드를 베이스로 합니다. 최대한 공수가 적게 들어가는 쪽으로 구현하는게 목표인 프로젝트 입니다.
 
 1. src/components/mt 폴더에 미리 스타일링된 컴포넌트 골라서 사용
 
