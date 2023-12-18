@@ -14,7 +14,7 @@ const Login = (): JSX.Element => {
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="h6" color="blue-gray" className="-mb-3">
-              Email
+              이메일
             </Typography>
             <Input
               size="lg"
@@ -26,7 +26,7 @@ const Login = (): JSX.Element => {
               crossOrigin={undefined}
             />
             <Typography variant="h6" color="blue-gray" className="-mb-3">
-              Password
+              비밀번호
             </Typography>
             <Input
               type="password"
