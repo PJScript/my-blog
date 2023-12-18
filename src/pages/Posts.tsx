@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import BlogCard from '../components/mt/BlogCard';
 import HorizontalCard from '../components/mt/HorizonBlogCard';
 import CircularPagination from '../components/mt/Pagination';
@@ -50,8 +51,12 @@ const Posts = (): JSX.Element => {
         xl:grid-cols-4
         "
         >
-          {posts.map((item: IBlogCard) => {
-            return <BlogCard title={item.title} content={item.content} src={item.src} alt={item.alt} createdAt={item.createdAt} />;
+          {posts.map((item: IBlogCard, idx: number) => {
+            return (
+              <Link to={`/post/${idx}`}>
+                <BlogCard title={item.title} content={item.content} src={item.src} alt={item.alt} createdAt={item.createdAt} />
+              </Link>
+            );
           })}
         </div>
       </div>

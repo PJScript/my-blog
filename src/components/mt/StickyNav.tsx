@@ -23,7 +23,7 @@ const StickyNavbar = ({ pages }: { pages: IPageListType[] }): JSX.Element => {
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {pages.map((item: IPageListType): JSX.Element | null => {
-        if (item.path === '/login' || item.path === '/signup') return null;
+        if (item.isVisible === false) return null;
         return (
           <Link to={item.path}>
             <Typography variant="small" color="blue-gray" className="p-1 font-normal">

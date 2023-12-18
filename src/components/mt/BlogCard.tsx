@@ -3,7 +3,7 @@ import { IBlogCard } from './types';
 
 const BlogCard = ({ title, content, createdAt, src, alt }: IBlogCard): JSX.Element => {
   return (
-    <Card className="max-w-[30rem] overflow-hidden">
+    <Card className="max-w-[30rem] overflow-hidden hover:cursor-pointer">
       <CardHeader floated={false} shadow={false} color="transparent" className="m-0 rounded-none">
         <img src={src} alt={alt} />
       </CardHeader>

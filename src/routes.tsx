@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Post from './pages/Post';
 import Posts from './pages/Posts';
 import SignUp from './pages/SignUp';
 
@@ -9,6 +10,7 @@ export interface IPageListType {
   icon: string;
   bgColor: string;
   label: string;
+  isVisible: boolean;
   children: React.ReactElement | React.ReactNode;
 }
 const PAGE_LIST: IPageListType[] = [
@@ -17,6 +19,7 @@ const PAGE_LIST: IPageListType[] = [
     icon: '',
     bgColor: '',
     label: 'home',
+    isVisible: true,
     children: <Home />,
   },
   {
@@ -24,6 +27,8 @@ const PAGE_LIST: IPageListType[] = [
     icon: '',
     bgColor: '',
     label: 'login',
+    isVisible: false,
+
     children: <Login />,
   },
   {
@@ -31,14 +36,27 @@ const PAGE_LIST: IPageListType[] = [
     icon: '',
     bgColor: '',
     label: 'signup',
+    isVisible: false,
+
     children: <SignUp />,
   },
   {
-    path: '/post:id',
+    path: '/post',
     icon: '',
     bgColor: '',
     label: 'post',
+    isVisible: true,
+
     children: <Posts />,
+  },
+  {
+    path: '/post/:id',
+    icon: '',
+    bgColor: '',
+    label: 'post',
+    isVisible: false,
+
+    children: <Post />,
   },
 ];
 
